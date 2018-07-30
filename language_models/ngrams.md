@@ -34,7 +34,47 @@ Would the probabilities of all possible sequences of words sum into 1? NO
 #TODO
 insert two formulas here
 
-### Perplexity
+### Evaluate language models: perplexity
+
+we have a probabilistic model (our n-gram model) and some data, we want to find the parameters of our model
+
+extrinsic evaluation: end to end evaluation
+
+likelihood = P(W_test)
+perplexity = P(W_test) ^ -1/N
+N : length of test corpus
+
+the lower perplexity, the better
+
+problem:
+train corpus: this is the house that Jack buit
+test corpus: this is the malt
+what is the preplexity of a bigram model?
+
+solution:
+p(w_test) = p(this) * p(is | this) * p(the | is) * p(malt | the)
+perplexity = P(w_test)^ -1/4 = 
+
+two issues:
+1- we have not seen word 'malt' in training data
+fix: replace not seen word with <unk> token
+2- we may see a new n-gram that we have not seen in the training data
+fix: smoothing
+  
+smoothing:
+add-one smoothing 
+add-k smoothing
+sometimes we want to use longer ngrams, but we don't have enough data:
+fix1: Kats backoff
+fix2: interpolation smoothing
+fix3: absolute discounting: ngram distribution in test is similar to train set
+
+
+
+  
+
+
+
 
 
 
