@@ -3,3 +3,5 @@
 the task is predict next word given previous words
 
 instead on on-hot encoding, we build a distributed represenation of words
+
+feed-forwad neural networks for language modelling
