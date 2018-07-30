@@ -34,6 +34,10 @@ Would the probabilities of all possible sequences of words sum into 1? NO
 #TODO
 insert two formulas here
 
+
+limitations of n-grams: ?
+each word is a token
+
 ### Evaluate language models: perplexity
 
 we have a probabilistic model (our n-gram model) and some data, we want to find the parameters of our model
